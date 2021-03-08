@@ -14,7 +14,7 @@ const styles = {
   card: {
     padding: '15px',
     position: 'relative',
-    top: '20px',
+    top: '90px',
     left: '50%',
     width: '325px',
     transform: 'translateX(-50%)',
@@ -46,8 +46,10 @@ class Login extends Component {
     if (this.state.username === "" || this.state.password === "") { return }
 
     if (this.state.username === "test_user" && this.state.password === "test_user") {
-      sessionStorage.setItem('access-token', 'IGQVJYd3RvT1laRU92enAweFZAqbU5EYzNXRHVPbFFQenBTQWlKNlJvczhJdGhhVWRMbTZASY1I1d1pPNEh4QVBpd0lwekE3NTJjVzVDZAXd4QmtjRlJ3dWVWbDE1cFRQdVpueUd3UzBRdU0zNWRPSzhDN0xNMVRLM0kyNnpR');
+      sessionStorage.setItem('username','test_user');
+      sessionStorage.setItem('access-token', 'IGQVJXS2JLbWVkWlpPS1VTVHNmV0JZAWUJnZAENUQWpzTTJGX0paUmJ5ZA3pCdWd1ZAXpkTkd0c2dsSXhxYmRIbmFPMmVBVmN3U0tGN0UtZAUtNNl9fcTJZAX0xtLUsxUGRKYlB6aWhNaUNOQmQ4YW81VjdPQTVHbDB3TjZADb01z');
       this.setState({ loggedIn: true });
+      this.navigateToHome();
     } else {
       this.setState({ incorrectUsernamePassword: "display-block" });
     }
@@ -61,10 +63,14 @@ class Login extends Component {
     this.setState({ password: e.target.value })
   }
 
+  navigateToHome = () => {
+    this.props.history.push('/home');
+  }
+
   render() {
     return (
-      <div>
-        <Header />
+      <div className="main-container">
+        <Header screen={"Login"} />
         <Card style={styles.card}>
           <CardContent>
             <Typography style={styles.title}> LOGIN </Typography><br />

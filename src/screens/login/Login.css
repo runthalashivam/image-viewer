@@ -9,3 +9,8 @@
 .display-block {
   display: block;
 }
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
