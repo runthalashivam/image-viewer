@@ -6,7 +6,7 @@ Instagram client using ReactJS.
 
 1. Clone the repo and install required packages
 ```
-https://github.com/runthalashivam/image-viewer.git
+git clone https://github.com/runthalashivam/image-viewer.git
 cd image-viewer
 npm install
 ```
