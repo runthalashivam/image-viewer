@@ -67,7 +67,6 @@ class Home extends Component {
   }
 
   getUserPosts = () => {
-    let mediaIdData = {};
     let url = `${constants.mediaIdUrl}&access_token=${sessionStorage.getItem('access-token')}`;
     fetch(url, {
       method: 'GET',
@@ -112,7 +111,6 @@ class Home extends Component {
     }).catch((error) => {
       console.log('error user data', error);
     });
-    return mediaIdData;
   }
 
   onSearchEntry = (value) => {
