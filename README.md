@@ -4,8 +4,9 @@ Instagram client using ReactJS.
 
 ### How to use
 
-1. Install required packages
+1. Clone the repo and install required packages
 ```
+https://github.com/runthalashivam/image-viewer.git
 cd image-viewer
 npm install
 ```
@@ -17,4 +18,9 @@ sessionStorage.setItem('access-token', '<authentication_token>');
 3. Start the application - 
 ```
 npm start
+```
+4. Goto localhost:3000 and login - 
+```
+username - test_user
+password - test_user
 ```
